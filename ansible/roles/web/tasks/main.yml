@@ -1,0 +1,10 @@
+---
+- name: Deploy web service using Docker
+  docker_container:
+    name: web_service
+    image: "{{ web_image }}"
+    state: started
+    ports:
+      - "8080:8080"
+    env:
+      NODE_ENV: "{{ web_env }}"

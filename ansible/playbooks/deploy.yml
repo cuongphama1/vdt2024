@@ -1,0 +1,15 @@
+---
+- name: Deploy web service
+  hosts: web
+  roles:
+    - web
+
+- name: Deploy api service
+  hosts: api
+  roles:
+    - api
+
+- name: Deploy db service
+  hosts: db
+  roles:
+    - db

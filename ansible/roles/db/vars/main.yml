@@ -1,0 +1,4 @@
+---
+db_image: "mongo:latest"
+db_user: "admin"
+db_password: "password"
