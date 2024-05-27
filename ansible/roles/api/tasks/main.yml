@@ -1,0 +1,12 @@
+---
+- name: Deploy API service using Docker
+  docker_container:
+    name: api_service
+    image: "{{ api_image }}"
+    state: started
+    ports:
+      - "5000:5000"
+    env:
+      NODE_ENV: "{{ api_env }}"
+      DB_HOST: "{{ db_host }}"
+      DB_PORT: "{{ db_port }}"
